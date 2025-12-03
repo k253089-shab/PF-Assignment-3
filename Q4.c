@@ -4,7 +4,7 @@
 struct Book {
     int id;
     int popularity;
-    int lastUsed;   // smaller value = older = remove first
+    int lastUsed;
 };
 
 int findBook(struct Book shelf[], int capacity, int id) {
@@ -50,10 +50,9 @@ int main() {
 
     char operation[10];
     int x, y;
-    int time = 1;  // updated on each access or add
+    int time = 1;
 
     for (i = 0; i < Q; i++) {
-
         scanf("%s", operation);
 
         if (strcmp(operation, "ADD") == 0) {
